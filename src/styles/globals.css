@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -18,10 +20,23 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url('https://i.imgur.com/RQxReg6.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.blurred-box {
+    width: 300px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* This creates the blurred background effect */
+    box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.2), 1px 4px 7px rgb(47 35 35 / 53%);
+    border: 2px solid rgb(192 192 192 / 58%);
+}
+.no-padding, .rt-CardInner  {
+  padding: 0 !important;
 }
